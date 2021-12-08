@@ -88,8 +88,6 @@ CREATE TABLE public.hotel_has_number (
 );
 
 
-
-
 ALTER TABLE public.hotel_has_number OWNER TO arsen;
 
 --
@@ -214,6 +212,9 @@ COPY public.hotel_admin (login, password, hotel_id) FROM stdin;
 --
 
 COPY public.hotel_has_number (hotel_id, number) FROM stdin;
+1	1
+1	2
+1	3
 \.
 
 
@@ -222,6 +223,9 @@ COPY public.hotel_has_number (hotel_id, number) FROM stdin;
 --
 
 COPY public.hotel_has_room_type (hotel_id, id, room_type_id) FROM stdin;
+1	1	1
+1	2	2
+1	3	3
 \.
 
 
@@ -246,6 +250,11 @@ COPY public.reservation (id, guest_id, check_in, ckeck_out, hotel_room_type_id) 
 --
 
 COPY public.room (hotel_room_type_id, room_number, floor_number) FROM stdin;
+1	12	12
+1	1222	12
+1	1222222	12
+2	1222222	12
+2	12	12
 \.
 
 
@@ -254,6 +263,9 @@ COPY public.room (hotel_room_type_id, room_number, floor_number) FROM stdin;
 --
 
 COPY public.room_type (type_name, capacity, size, id) FROM stdin;
+single	1	1	1
+single	1	1	2
+single	1	1	3
 \.
 
 
