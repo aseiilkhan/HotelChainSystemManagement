@@ -1,9 +1,9 @@
 package com.springboot.hotels.model;
-public class RoomType{
+public class RoomTypeModel{
 	private int size;
 	private int capacity;
 	private int hotelId;
-	RoomType(int size, int capacity, int hotelId){
+	RoomTypeModel(int size, int capacity, int hotelId){
 		this.size = size;
 		this.capacity = capacity;
 		this.hotelId = hotelId;
