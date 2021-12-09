@@ -7,9 +7,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "room_type")
 public class RoomType implements Serializable{
+	@Column(name = "type_name")
+	private String typeName;
 	@Id
 	private int id;
-	private String typeName;
 	private int capacity;
 	private int size;
 	

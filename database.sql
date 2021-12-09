@@ -124,7 +124,7 @@ CREATE TABLE public.reservation (
     id integer NOT NULL,
     guest_id integer,
     check_in date,
-    ckeck_out date,
+    check_out date,
     hotel_room_type_id integer
 );
 
@@ -187,6 +187,7 @@ COPY public.employee (employee_id, name, surname, salary, hotel_id) FROM stdin;
 COPY public.guest (id, id_type, id_number, address, home_number, mobile_number) FROM stdin;
 1	passport	293202390	39009120939021023	\N	\N
 2	passport	293202390	3909131	901099213	390091223
+3	passport	293202390	3909131	901099213	390091223
 \.
 
 
@@ -241,7 +242,8 @@ COPY public.occupied (person, room_id, hotel_id) FROM stdin;
 -- Data for Name: reservation; Type: TABLE DATA; Schema: public; Owner: arsen
 --
 
-COPY public.reservation (id, guest_id, check_in, ckeck_out, hotel_room_type_id) FROM stdin;
+COPY public.reservation (id, guest_id, check_in, check_out, hotel_room_type_id) FROM stdin;
+1	1	2002-01-01	2020-01-01	1
 \.
 
 
