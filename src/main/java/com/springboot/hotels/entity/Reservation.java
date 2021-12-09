@@ -3,6 +3,7 @@ package com.springboot.hotels.entity;
 import java.sql.Date;
 
 import javax.persistence.*;
+
 @Entity
 @Table(name = "reservation")
 public class Reservation{
@@ -23,6 +24,14 @@ public class Reservation{
 		roomType = rt;
 	}
 	
+	public Reservation(Object a, Object b, Object c, Object d, Object e, Object f) {
+		id = (int)a;
+		guestId =(int) b;
+		hotelId = (int) c;
+		checkIn = (Date) d;
+		checkOut = (Date) e;
+		roomType = (String) f;
+	}
 	public int getId() {
 		return id;
 	}
