@@ -13,7 +13,7 @@ import com.springboot.hotels.repository.GuestRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/guest")
+@RequestMapping(value = "/guests")
 public class GuestController {
     @Autowired
     private GuestRepository guestRepo;
