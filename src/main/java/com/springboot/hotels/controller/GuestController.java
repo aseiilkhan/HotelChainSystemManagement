@@ -26,7 +26,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping(value = "/guest")
+@RequestMapping(value = "/guests")
 public class GuestController {
     @Autowired
     private GuestRepository guestRepo;
