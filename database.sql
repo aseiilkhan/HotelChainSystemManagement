@@ -134,7 +134,7 @@ CREATE TABLE public.reservation (
     id integer NOT NULL,
     guest_id integer,
     check_in date,
-    ckeck_out date,
+    check_out date,
     hotel_room_type_id integer
 );
 
@@ -221,6 +221,7 @@ COPY public.guest (id, id_type, id_number, address, home_number, mobile_number) 
 8	National_ID	808509302	Otarova66	87759337501	872525942585
 9	Insurance_ID	122509302	Fifth Avenue 56	007845691	\N
 10	Insurance_ID	100509302	Fifth Avenue 56	017845691	\N
+3	passport	293202390	3909131	901099213	390091223
 \.
 
 
@@ -331,6 +332,8 @@ COPY public.reservation (id, guest_id, check_in, ckeck_out, hotel_room_type_id) 
 8	8	2021-12-12	2021-12-30	2
 7	7	2021-12-12	2021-12-30	3
 6	6	2021-12-10	2021-12-18	4
+COPY public.reservation (id, guest_id, check_in, check_out, hotel_room_type_id) FROM stdin;
+1	1	2002-01-01	2020-01-01	1
 \.
 
 

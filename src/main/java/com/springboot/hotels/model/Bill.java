@@ -10,7 +10,7 @@ public class Bill{
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;
 	}
-	
+
 	public Date getCheckIn() {
 		return checkIn;
 	}

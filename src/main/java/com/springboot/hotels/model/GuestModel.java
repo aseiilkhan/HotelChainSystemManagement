@@ -11,4 +11,5 @@ public class GuestModel{
 	private List<ReservationModel> ocuppaying;
 	private List<Bill> bills;
 	
+	
 }

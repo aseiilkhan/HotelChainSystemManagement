@@ -4,6 +4,11 @@ import java.util.List;
 import javax.persistence.*;
 @Entity
 @Table(name = "guest")
+@NamedNativeQueries({
+	@NamedNativeQuery(name = "Guest.findReservationsById", query = "select * from (select r.id, r.guest_id, r.check_in, r.check_out, h.hotel_id,  h.room_type_id from reservation r join hotel_has_room_type h on r.hotel_room_type_id = h.id where r.guest_id = 1) x\n" + 
+			";"),
+	@NamedNativeQuery(name = "Guest.findHotelById", query = "select * from hotel where id = ?1")
+})
 public class Guest{
 	@Id
 	private int id;
@@ -23,6 +28,7 @@ public class Guest{
 		this.home_number = home_number;
 		this.mobile_number = mobile_number;
 	}
+	
 	
 	public int getId() {
 		return id;
